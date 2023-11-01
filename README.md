@@ -3,7 +3,7 @@
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/kaiqlopes/client-crud/blob/main/LICENSE)
 
 # About the project
-This project is a Back-End RESTful API that you can register, retrieve data, update and also delete the customers.
+This project is a Back-End RESTful API that you can register, retrieve, update and also delete the customers data.
 <br><br>
 Very useful when you need to keep records of your clients.
 
