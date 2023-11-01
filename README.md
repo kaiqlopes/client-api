@@ -30,6 +30,60 @@ Very useful when you need to keep records of your clients.
 - Customized HTTP response codes using ResponseEntity
 - Customized exceptions responses
 
+## How to run
+
+<b>Prerequisites:</b> Java 21
+
+<b>1.</b> Clone the repository
+  ```bash
+  git clone git@github.com:kaiqlopes/client-api.git
+```
+<br>
+
+<b>2.</b> Open the project in your preferred IDE and execute it
+
+<br>
+
+<b>3.</b> Use your favorite API REST testing tool
+
+### Endpoints:
+
+<br>
+
+- <b>GET CLIENT BY ID:</b>
+```bash
+  localhost:8080/clients/idHere
+```
+<br>
+
+- <b>GET ALL CLIENTS:</b>
+```bash
+  localhost:8080/clients
+```
+
+<br>
+
+- <b>POST NEW CLIENT:</b> <br>
+Make sure to send the data using JSON format
+```bash
+  localhost:8080/clients
+```
+
+<br>
+
+- <b>PUT CLIENT (UPDATE):</b> <br>
+Make sure to send the data using JSON format
+```bash
+  localhost:8080/clients/idHere
+```
+
+<br>
+
+- <b>DELETE CLIENT:</b> <br>
+```bash
+  localhost:8080/clients/idHere
+```
+
 ## Author
 <b>_Kaique Lopes da Silva_</b> <br>
 <div align="left" style="display: inline-block;">
