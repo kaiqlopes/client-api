@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 public class ClientService {
 
@@ -58,6 +60,15 @@ public class ClientService {
         } catch (DataIntegrityViolationException e) {
             throw new DatabaseException("Referential Integrity violation");
         }
+    }
+
+    @Transactional(readOnly = true)
+    public List<ClientDTO> findByName(String name) {
+        List<Client> result = repository.findByName(name);
+        if (result.isEmpty()) {
+            throw new ResourceNotFoundException("Resource not found");
+        }
+        return result.stream().map(ClientDTO::new).toList();
     }
 
     public void copyDtoToClient(Client client, ClientDTO dto) {

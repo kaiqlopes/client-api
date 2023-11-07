@@ -7,11 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/clients")
@@ -26,11 +26,11 @@ public class ClientController {
         return ResponseEntity.ok(dto);
     }
 
-    @GetMapping
+    /*@GetMapping
     public ResponseEntity<Page<ClientDTO>> findAll(Pageable pageable) {
         Page<ClientDTO> dto = service.findAll(pageable);
         return ResponseEntity.ok(dto);
-    }
+    }*/
 
     @PostMapping
     public ResponseEntity<ClientDTO> insert(@Valid @RequestBody ClientDTO dto) {
@@ -50,5 +50,11 @@ public class ClientController {
     public ResponseEntity<Void> delete (@PathVariable Long id)  {
         service.delete(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping
+    public ResponseEntity<List<ClientDTO>> findByName(@RequestParam(name = "name", defaultValue = "") String name) {
+        List<ClientDTO> dto = service.findByName(name);
+        return ResponseEntity.ok().body(dto);
     }
 }
