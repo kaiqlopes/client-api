@@ -56,6 +56,12 @@ Very useful when you need to keep records of your clients.
 ```
 <br>
 
+- <b>GET CLIENT BY NAME (Case insensitive):</b>
+```bash
+  localhost:8080/clients?name=nameHere
+```
+<br>
+
 - <b>GET ALL CLIENTS:</b>
 ```bash
   localhost:8080/clients
