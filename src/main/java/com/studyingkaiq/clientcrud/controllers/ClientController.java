@@ -26,12 +26,11 @@ public class ClientController {
         return ResponseEntity.ok(dto);
     }
 
-    /*@GetMapping
+    @GetMapping(value = "/all")
     public ResponseEntity<Page<ClientDTO>> findAll(Pageable pageable) {
         Page<ClientDTO> dto = service.findAll(pageable);
         return ResponseEntity.ok(dto);
-    }*/
-
+    }
     @PostMapping
     public ResponseEntity<ClientDTO> insert(@Valid @RequestBody ClientDTO dto) {
         dto = service.insert(dto);

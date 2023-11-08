@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.studyingkaiq</groupId>
-	<artifactId>clientcrud</artifactId>
+	<artifactId>clientapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>clientcrud</name>
 	<description>client crud</description>

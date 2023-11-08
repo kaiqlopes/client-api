@@ -2,8 +2,8 @@ package com.studyingkaiq.clientcrud.services;
 
 import com.studyingkaiq.clientcrud.dtos.ClientDTO;
 import com.studyingkaiq.clientcrud.entities.Client;
-import com.studyingkaiq.clientcrud.repositories.ClientRepository;
 import com.studyingkaiq.clientcrud.services.exceptions.DatabaseException;
+import com.studyingkaiq.clientcrud.repositories.ClientRepository;
 import com.studyingkaiq.clientcrud.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
