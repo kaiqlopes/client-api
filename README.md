@@ -1,4 +1,4 @@
-# Client CRUD API
+# Client API
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/kaiqlopes/client-crud/blob/main/LICENSE)
 
@@ -7,7 +7,7 @@ This project is a Back-End RESTful API that you can register, retrieve, update a
 <br><br>
 Very useful when you need to keep records of your clients.
 
-## Conceptual Model
+## Domain Model
 
 ![image](https://github.com/kaiqlopes/client-crud/assets/58572272/f727e744-8a57-49e0-b729-6d85e0a3e587)
 
@@ -28,11 +28,11 @@ Very useful when you need to keep records of your clients.
   ![image](https://github.com/kaiqlopes/client-crud/assets/58572272/1d229883-d1e3-4593-9b19-26887cf8cc18)
   <br><br>
 - Customized HTTP response codes using ResponseEntity
-- Customized exceptions responses
+- Customized exceptions response messages
 
 ## How to run
 
-<b>Prerequisites:</b> Java 21
+<b>Prerequisites:</b> Java 17
 
 <b>1.</b> Clone the repository
   ```bash
@@ -46,7 +46,7 @@ Very useful when you need to keep records of your clients.
 
 <b>3.</b> Use your favorite API REST testing tool
 
-### Endpoints:
+## Endpoints:
 
 <br>
 
@@ -70,7 +70,6 @@ Very useful when you need to keep records of your clients.
 <br>
 
 - <b>POST NEW CLIENT:</b> <br>
-Make sure to send the data using JSON format
 ```bash
   localhost:8080/clients
 ```
@@ -78,7 +77,6 @@ Make sure to send the data using JSON format
 <br>
 
 - <b>PUT CLIENT (UPDATE):</b> <br>
-Make sure to send the data using JSON format
 ```bash
   localhost:8080/clients/idHere
 ```
